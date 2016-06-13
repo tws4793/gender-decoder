@@ -1,1 +1,0 @@
-web: gunicorn genderjobcheck.wsgi --log-file -

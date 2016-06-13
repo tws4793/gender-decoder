@@ -1,5 +1,4 @@
 import re
-
 import wordlists
 
 def assess(ad_text):
@@ -7,7 +6,7 @@ def assess(ad_text):
     ad_text = re.sub("[\\s]", " ", ad_text, 0, 0)
     ad_text = re.sub("[\.\t\,\:;\(\)\.]", "", ad_text, 0, 0).split(" ")
     ad_text = [ad for ad in ad_text if ad != ""]
-    
+        
     masculine_coded_words = [adword for adword in ad_text
         for word in wordlists.masculine_coded_words
         if adword.startswith(word)]
